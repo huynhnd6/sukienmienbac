@@ -1,20 +1,73 @@
-nav.navbar.navbar-expand-sm.navbar-dark.bg-success
-    .container
-        a.navbar-brand(href='#')
-            img.d-inline-block.align-top(src='https://via.placeholder.com/158x42?text=logo', width='158', height='42', alt='logo')
-        button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarNav', aria-controls='navbarNav', aria-expanded='false', aria-label='Toggle navigation')
-            span.navbar-toggler-icon
-        #navbarNav.collapse.navbar-collapse
-            ul.navbar-nav
-                li.nav-item.text-uppercase.active
-                    a.font-weight-bold.nav-link(href='#')
-                        | Trang chủ
-                        span.sr-only (current)
-                li.nav-item.text-uppercase
-                    a.font-weight-bold.nav-link(href='#') Menu 1
-                li.nav-item.text-uppercase
-                    a.font-weight-bold.nav-link(href='#') Menu 2
-                li.nav-item.text-uppercase
-                    a.font-weight-bold.nav-link(href='#') Menu 3
-                li.nav-item.text-uppercase
-                    a.font-weight-bold.nav-link(href='#') Menu 4
+header.header
+    .header__container
+        a(href="/").header__logo
+            img(src="/img/logo.png")
+        .header__right
+            .header__hotline
+                i.fa.fa-phone
+                span
+                    a(href="tel:0888678887") 08886.7.8887
+                    |  -
+                    a(href="tel:0888678887")  0886.888.787
+            .header__search
+                input(placeholder="Nhập nội dung tìm kiếm...")
+                button
+                    i.fa.fa-search
+
+nav.navbar
+    .navbar__container
+        a(href="#")
+            i.fa.fa-home
+            span Trang chủ
+        a(href="#")
+            i.fa.fa-bars
+            span Gói dịch vụ
+        a(href="#")
+            i.fa.fa-newspaper-o
+            span Tin tức
+        a(href="#")
+            i.fa.fa-info-circle
+            span Liên hệ
+.navmodal
+    .navmodal__container
+        a(href="/")
+            img.navmodal__logo(src="/img/logo.png")
+        button.navmodal__close
+            i.fa.fa-times-circle
+        .navmodal__menu
+            a(href='/cho-thue/laptop/')
+                i.fa.fa-laptop
+                |  Cho thuê laptop
+            a(href='/cho-thue/am-thanh/')
+                i.fa.fa-volume-up
+                | Cho thuê âm thanh
+            a(href='/cho-thue/dien-thoai/')
+                i.fa-tablet
+                | Cho thuê điện thoại
+            a(href='/cho-thue/may-tinh/')
+                i.fa.fa-desktop
+                |  Cho thuê PC
+            a(href='/cho-thue/may-tinh-bang/')
+                i.fa.fa-tablet
+                |  Cho thuê Tablet
+            a(href='/cho-thue/may-chieu/')
+                i.fa.fa-laptop
+                |  Cho thuê máy chiếu
+            a(href='/cho-thue/tivi/')
+                i.fa.fa-television
+                |  Cho thuê tivi
+            a(href='/cho-thue/may-in/')
+                i.fa.fa-print
+                | Cho thuê máy in
+            a(href='/cho-thue/thiet-bi-cong-nghe/')
+                i.fa.fa-th-large
+                |  Thiết bị công nghệ
+            a(href='/cho-thue/thiet-bi-mang/')
+                i.fa.fa-wifi
+                |  Thiết bị mạng
+            a(href='cho-thue/ban-ghe/')
+                i.fa.fa-folder-open-o
+                |  Cho thuê bàn ghế
+            a(href='/cho-thue/thiet-bi-khac/')
+                i.fa.fa-university
+                | Thiết bị khác

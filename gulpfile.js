@@ -12,10 +12,10 @@ var concat = require('gulp-concat'),
 
 gulp.task('scss', function () {
     return gulp.src([
-        'htdocs/vendor/bootstrap-4.0.0-dist/css/bootstrap.min.css',
+        'node_modules/sanitize.css/sanitize.css',
+        'node_modules/font-awesome/css/font-awesome.min.css',
         'src/**/*.scss'
     ])
-        .pipe(sourcemaps.init())
         .pipe(sass({
             outputStyle: 'expanded',
             indentType: 'space',
@@ -28,7 +28,6 @@ gulp.task('scss', function () {
         .pipe(gulp.dest('htdocs/css'))
         .pipe(rename({extname: '.min.css'}))
         .pipe(cssnano({ zindex: false }))
-        .pipe(sourcemaps.write())
         .pipe(gulp.dest('htdocs/css'))
 });
 
@@ -48,8 +47,6 @@ gulp.task("pug", function () {
 gulp.task('js', function () {
     return gulp.src([
         'htdocs/vendor/jquery/jquery-3.4.1.min.js',
-        'htdocs/vendor/popper/popper.min.js',
-        'htdocs/vendor/bootstrap-4.0.0-dist/js/bootstrap.min.js',
         'src/**/*.js'
     ])
         .pipe(sourcemaps.init())
